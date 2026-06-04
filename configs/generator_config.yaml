@@ -1,0 +1,41 @@
+project:
+  name: digital_banking_fraud_monitoring
+  random_seed: 42
+
+time_range:
+  start_date: "2025-01-01"
+  end_date: "2025-03-31"
+
+entities:
+  n_customers: 10000
+  n_merchants: 3000
+  max_accounts_per_customer: 3
+  card_ownership_rate: 0.75
+
+behavior:
+  avg_transactions_per_customer_per_month: 12
+  base_fraud_rate: 0.003
+  currency: "VND"
+
+data_quality:
+  duplicate_transaction_rate: 0.02
+  duplicate_event_rate: 0.015
+  late_arrival_rate: 0.10
+  late_arrival_min_minutes: 5
+  late_arrival_max_minutes: 120
+  missing_device_id_rate: 0.05
+  missing_merchant_category_rate: 0.03
+  out_of_order_event_rate: 0.05
+
+schema_evolution:
+  schema_change_date: "2025-02-15"
+  old_missing_columns:
+    - device_id
+    - ip_country
+    - channel
+
+output:
+  source_offline_path: "data/source/offline"
+  source_stream_path: "data/source/stream"
+  report_path: "reports/01_generation_report.md"
+  log_path: "logs/01_generate_data.log"

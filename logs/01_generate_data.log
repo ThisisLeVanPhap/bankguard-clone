@@ -1,0 +1,15 @@
+2026-06-04 17:35:53,800 | INFO | Starting data generation
+2026-06-04 17:35:53,800 | INFO | Using random seed: 42
+2026-06-04 17:35:55,659 | INFO | Generating historical transactions: 360000 rows
+2026-06-04 17:47:40,291 | INFO | Wrote 10000 rows to data\source\offline\customers.parquet
+2026-06-04 17:47:40,325 | INFO | Wrote 14670 rows to data\source\offline\accounts.parquet
+2026-06-04 17:47:40,359 | INFO | Wrote 11002 rows to data\source\offline\cards.parquet
+2026-06-04 17:47:40,372 | INFO | Wrote 3000 rows to data\source\offline\merchants.parquet
+2026-06-04 17:47:41,836 | INFO | Wrote 367200 rows to data\source\offline\historical_transactions.parquet
+2026-06-04 17:47:41,863 | INFO | Wrote 4236 rows to data\source\offline\fraud_cases.parquet
+2026-06-04 17:47:59,378 | INFO | Wrote 365400 rows to data\source\stream\transaction_events.jsonl
+2026-06-04 17:48:02,348 | INFO | Wrote 80000 rows to data\source\stream\login_events.jsonl
+2026-06-04 17:48:02,939 | INFO | Wrote 15000 rows to data\source\stream\device_events.jsonl
+2026-06-04 17:48:06,182 | INFO | Wrote 90240 rows to data\source\stream\fraud_alert_events.jsonl
+2026-06-04 17:48:07,558 | INFO | Wrote generation report to reports\01_generation_report.md
+2026-06-04 17:48:07,624 | INFO | Data generation completed successfully
