@@ -1,0 +1,8 @@
+pandas==2.2.2
+numpy==1.26.4
+pyyaml==6.0.2
+pyarrow==24.0.0
+deltalake==1.6.0
+duckdb==1.5.3
+tabulate==0.9.0
+acryl-datahub==1.6.0
