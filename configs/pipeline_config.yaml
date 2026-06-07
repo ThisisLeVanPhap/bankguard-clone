@@ -1,0 +1,32 @@
+project:
+  name: digital_banking_fraud_monitoring
+
+paths:
+  source_offline_path: "data/source/offline"
+  source_stream_path: "data/source/stream"
+  bronze_path: "data/bronze"
+  silver_path: "data/silver"
+  gold_path: "data/gold"
+  warehouse_path: "warehouse/finance.duckdb"
+  report_path: "reports/02_pipeline_run_metadata.csv"
+  quality_report_path: "reports/02_data_quality_report.md"
+  lineage_report_path: "reports/02_lineage_summary.md"
+  log_path: "logs/02_pipeline_run.log"
+
+source_system:
+  name: digital_banking_source_simulator
+
+bronze:
+  offline_tables:
+    - customers
+    - accounts
+    - cards
+    - merchants
+    - historical_transactions
+    - fraud_cases
+
+  stream_tables:
+    - transaction_events
+    - login_events
+    - device_events
+    - fraud_alert_events
